@@ -13,9 +13,6 @@ A tool for Game Maker Studio 2 to manage dependencies and speed up your process
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
-* [Usage](#usage)
-* [Commands](#commands)
-<!-- tocstop -->
 # Usage
 <!-- usage -->
 ```sh-session
@@ -23,19 +20,7 @@ $ npm install -g @gamemakerhub/catalyst
 $ catalyst COMMAND
 running command...
 $ catalyst (-v|--version|version)
-@gamemakerhub/catalyst/0.0.0 win32-x64 node-v10.11.0
-$ catalyst --help [COMMAND]
-USAGE
-  $ catalyst COMMAND
-...
-```
-<!-- usagestop -->
-```sh-session
-$ npm install -g @gamemakerhub/catalyst
-$ catalyst COMMAND
-running command...
-$ catalyst (-v|--version|version)
-@gamemakerhub/catalyst/0.0.0 win32-x64 node-v10.11.0
+@gamemakerhub/catalyst/0.0.0 linux-x64 node-v10.15.3
 $ catalyst --help [COMMAND]
 USAGE
   $ catalyst COMMAND
@@ -46,6 +31,7 @@ USAGE
 <!-- commands -->
 * [`catalyst hello [FILE]`](#catalyst-hello-file)
 * [`catalyst help [COMMAND]`](#catalyst-help-command)
+* [`catalyst tree`](#catalyst-tree)
 
 ## `catalyst hello [FILE]`
 
@@ -65,7 +51,7 @@ EXAMPLE
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src\commands\hello.ts](https://github.com/GameMakerHub/catalyst/blob/v0.0.0/src\commands\hello.ts)_
+_See code: [src/commands/hello.ts](https://github.com/GameMakerHub/catalyst/blob/v0.0.0/src/commands/hello.ts)_
 
 ## `catalyst help [COMMAND]`
 
@@ -82,45 +68,19 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src\commands\help.ts)_
-<!-- commandsstop -->
-* [`catalyst hello [FILE]`](#catalyst-hello-file)
-* [`catalyst help [COMMAND]`](#catalyst-help-command)
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src/commands/help.ts)_
 
-## `catalyst hello [FILE]`
+## `catalyst tree`
 
-describe the command here
+List the contents of the current project
 
 ```
 USAGE
-  $ catalyst hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ catalyst tree
 
 EXAMPLE
-  $ catalyst hello
-  hello world from ./src/hello.ts!
+  $ catalyst tree
 ```
 
-_See code: [src\commands\hello.ts](https://github.com/GameMakerHub/catalyst/blob/v0.0.0/src\commands\hello.ts)_
-
-## `catalyst help [COMMAND]`
-
-display help for catalyst
-
-```
-USAGE
-  $ catalyst help [COMMAND]
-
-ARGUMENTS
-  COMMAND  command to show help for
-
-OPTIONS
-  --all  see all commands in CLI
-```
-
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src\commands\help.ts)_
+_See code: [src/commands/tree.ts](https://github.com/GameMakerHub/catalyst/blob/v0.0.0/src/commands/tree.ts)_
 <!-- commandsstop -->
